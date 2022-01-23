@@ -1,0 +1,26 @@
+s3:
+  bucket-name: aws-training-images-ulad-mos2
+  region: us-east-1
+sns:
+  region: us-east-1
+  topic-arn: arn:aws:sns:us-east-1:985227476816:aws-SNS_SQS-uploads-notification-topic
+sqs:
+  region: us-east-1
+  queue-url: https://sqs.us-east-1.amazonaws.com/985227476816/aws-SNS_SQS-uploads-notification-queue
+lambda:
+  region: us-east-1
+  function-name: aws-training-uploads-batch-notifier
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/aws_training
+    username: root
+    password: CatalinF
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+
+
